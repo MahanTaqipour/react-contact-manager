@@ -56,7 +56,7 @@ const ContactForm = () => {
     <Box
       p={8}
       // borderWidth={1}
-      borderRadius="lg"
+      borderRadius="20px"
       w={"70%"}
       marginX={"auto"}
       marginTop={"20px"}
@@ -87,7 +87,12 @@ const ContactForm = () => {
         <VStack spacing={10} marginTop={"px"}>
           <FormControl isInvalid={!!errors.name}>
             <FormLabel htmlFor="name">Name</FormLabel>
-            <Input id="name" placeholder="Your Name" {...register("name")} />
+            <Input
+              id="name"
+              placeholder="Your Name"
+              {...register("name")}
+              borderRadius="20px"
+            />
             <FormErrorMessage>{errors.name?.message}</FormErrorMessage>
           </FormControl>
 
@@ -97,6 +102,7 @@ const ContactForm = () => {
               id="phone"
               placeholder="000-000-0000"
               {...register("phone")}
+              borderRadius="20px"
             />
 
             <FormErrorMessage>{errors.phone?.message}</FormErrorMessage>
@@ -104,7 +110,12 @@ const ContactForm = () => {
 
           <FormControl isInvalid={!!errors.email}>
             <FormLabel htmlFor="email">Email</FormLabel>
-            <Input id="email" placeholder="Your Email" {...register("email")} />
+            <Input
+              id="email"
+              placeholder="Your Email"
+              {...register("email")}
+              borderRadius="20px"
+            />
             <FormErrorMessage>{errors.email?.message}</FormErrorMessage>
           </FormControl>
 
@@ -113,6 +124,7 @@ const ContactForm = () => {
             colorScheme="teal"
             type="submit"
             isLoading={isSubmitting}
+            borderRadius="20px"
           >
             {isEditing ? "Done" : "Add"}
           </Button>

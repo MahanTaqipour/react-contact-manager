@@ -51,8 +51,11 @@ const ContactList = () => {
               justifyContent={"space-between"}
             >
               <ListIcon as={FaUserCircle} boxSize={"50px"} />
-              <Text fontSize={"1xl"}>{contact.name}</Text>
+              <Text fontSize={"18px"} fontWeight="bold">
+                {contact.name}
+              </Text>
               <Text>{contact.phone}</Text>
+              <Text>{contact.email}</Text>
               <Box>
                 <Button
                   mx={"2px"}
